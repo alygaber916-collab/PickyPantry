@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Add the ingredients you have and get ranked recipes you can cook right now.">
+  <title>Picky Pantry - find a recipe from what you have</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- HEADER: site name + navigation (same on every page) -->
+  <header class="site-header">
+    <a class="logo" href="index.html">Picky Pantry</a>
+    <nav aria-label="Main">
+        <a href="index.html#finder" aria-current="page">Find recipes</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO: explains the site in one line -->
+    <section class="hero">
+      <h1>What's in your kitchen?</h1>
+      <p>Add the ingredients you have and we'll rank recipes you can cook right now.</p>
+    </section>
+
+    <!-- FINDER: ingredient input + filters + results -->
+    <section id="finder">
+
+      <!-- Panel 1: ingredient input -->
+      <div class="panel">
+        <label for="ingredient-input">Your ingredients</label>
+        <div class="add-row">
+          <input id="ingredient-input" type="text" placeholder="e.g. eggs, then press Enter" autocomplete="off">
+          <button id="add-btn" type="button">Add</button>
+        </div>
+        <ul id="chips" class="chips" aria-label="Ingredients you added"></ul>
+        <p id="chips-empty" class="hint">No ingredients yet. Try tomato, rice or eggs.</p>
+      </div>
+
+      <!-- Panel 2: search + filters -->
+      <div class="panel filters">
+        <div>
+          <label for="search-input">Search by name</label>
+          <input id="search-input" type="search" placeholder="Pasta, curry, salad...">
+        </div>
+        <div>
+          <label for="diet-filter">Diet</label>
+          <select id="diet-filter">
+            <option value="all">Any</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="gluten-free">Gluten-free</option>
+          </select>
+        </div>
+        <div>
+          <label for="time-filter">Max time</label>
+          <select id="time-filter">
+            <option value="999">Any</option>
+            <option value="15">15 min</option>
+            <option value="30">30 min</option>
+            <option value="60">60 min</option>
+          </select>
+        </div>
+        <div>
+          <label for="level-filter">Difficulty</label>
+          <select id="level-filter">
+            <option value="all">Any</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+          </select>
+        </div>
+        <button id="reset-btn" type="button" class="ghost">Reset filters</button>
+      </div>
+
+      <!-- Results are inserted here by js/script.js -->
+      <p id="result-count" class="result-count" aria-live="polite"></p>
+      <div id="results">
+    <noscript><p class="empty">Picky Pantry needs JavaScript to search recipes. Please turn it on and reload.</p></noscript>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: the bottom panel with contact + more about us (same on every page) -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Picky Pantry</h3>
+        <p>Cook more, waste less.</p>
+      </div>
+      <div>
+        <h3>More about us</h3>
+        <ul>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="about.html#how">How it works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact us</h3>
+        <ul>
+          <li><a href="mailto:hello@pickypantry.example">hello@pickypantry.example</a></li>
+          <li>Alexandria, Egypt</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Picky Pantry. Course project.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

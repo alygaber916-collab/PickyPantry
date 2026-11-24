@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ingredients and steps for a Picky Pantry recipe.">
+  <title>Recipe - Picky Pantry</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- HEADER: site name + navigation (same on every page) -->
+  <header class="site-header">
+    <a class="logo" href="index.html">Picky Pantry</a>
+    <nav aria-label="Main">
+        <a href="index.html#finder">Find recipes</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="recipe-page">
+    <!-- The recipe is inserted here by js/recipe.js, based on ?id=... in the address -->
+    <article id="recipe" aria-live="polite">
+    <noscript><p class="empty">Picky Pantry needs JavaScript to search recipes. Please turn it on and reload.</p></noscript>
+    </article>
+  </main>
+
+  <!-- FOOTER: the bottom panel with contact + more about us (same on every page) -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Picky Pantry</h3>
+        <p>Cook more, waste less.</p>
+      </div>
+      <div>
+        <h3>More about us</h3>
+        <ul>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="about.html#how">How it works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact us</h3>
+        <ul>
+          <li><a href="mailto:hello@pickypantry.example">hello@pickypantry.example</a></li>
+          <li>Alexandria, Egypt</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Picky Pantry. Course project.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/recipe.js"></script>
+</body>
+
+</html>
